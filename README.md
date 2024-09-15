@@ -1,5 +1,7 @@
 # Computer Vision for Airborne Imaging of Antarctica: Creating a 75-Year Record of Surface Change
 
+You can view the full research paper [here](SURF 2024 FINAL REPORT.pdf).
+
 **Author:** Sani Deshmukh, California Institute of Technology  
 **Research Mentor:** James Dickson (Polar Geospatial Center Director, UMN)  
 **Associate Mentor:** Professor Bethany Ehlmann (Caltech)
@@ -63,6 +65,6 @@ The project shows that **SIFT** and **AKAZE** outperform other algorithms in mat
 - Scale up to process the full Antarctic archive of aerial imagery.
 
 ## Contributors
-- **Sani Deshmukh** - [GitHub](https://github.com/yourusername)
+- **Sani Deshmukh** - [GitHub](https://github.com/sani-deshmukh)
 - **James Dickson** - Research Mentor
 - **Bethany Ehlmann** - Associate Mentor
