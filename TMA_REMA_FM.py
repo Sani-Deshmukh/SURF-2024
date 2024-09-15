@@ -197,15 +197,6 @@ def run_match(tma_id):
 
             print("Check FM iterations complete")
 
-            # if matches_found > 0:
-            #     shutil.move(f"{workdir}/{tma_id}", f"{WORKED_PATH}/{tma_id}")
-            #     shutil.move(f"{workdir}/{tma_id}_RDN_average_byte.tif",
-            #                 f"{WORKED_PATH}/{tma_id}/{tma_id}_RDN_average_byte.tif")
-            # else:
-            #     shutil.move(f"{workdir}/{tma_id}_RDN_average_byte.tif", f"{FAILED_PATH}/{tma_id}_RDN_average_byte.tif")
-
-
-
     except Exception as e:
         print(e)
 
@@ -228,7 +219,6 @@ def clip_rema(x_meters, y_meters, tma_id, buffer, workdir):
 
 if __name__ == "__main__":
     # argument handling
-    # argument libraries: argparse: imager_utils, pgc_dem_tools_util
 
     # Use click
     if len(sys.argv) == 2:
@@ -256,45 +246,3 @@ if __name__ == "__main__":
         print("INVALID PARAMS")
         print("SINGLE RUN:\t python LTB_FM_M3.py <TMA_ID>")
         print("BATCH RUN:\t python LTB_FM_M3.py -f <M3 list file>")
-
-#crop the border
-#Make in a single band image: Normalize into grayscale and more
-#Maybe might have to rotate the image based on the direction of flight line
-#determine the location of the image and the bounding box: extend of search irl
-##getting the coordinated of the image from csv
-# Create a point (a geometry object) using ogr
-# Create a transforamtion from lat long (code 4326) to Antarctic polar stereographic code 3031
-# Use osr (under gdal project like ogr)
-# apply the transformation to the point object to get it into meter system
-# at this point we have the center location to search
-# Next, male the extent we want to search: maxy, maxx, miny..
-# Make sure to include a buffer
-
-# based on the focal length or brute force:
-#get the locations from pt csv. Also get altitude and calculate scale
-#if no altitude, make a reasonable guess for the bounding box
-
-#Go on the server and pull down REMA and turn into a virtual mosaic
-#virtual raster of REMA (.vrt file with a gdal library) (line 166)
-#subset will be stored dem
-#Try feature matching on the image for every azimuth and inclination angle in some
-#increments
-#run checkFM
-
-#when succeeded record the information
-
-  # matched = False
-            # for inc in range(90, 10, -10):
-            #     for azm in range(-180, 180, 10):
-            #         if checkFM(inc, azm, rema_subset, cropped_path, workdir, tma_id):
-            #             matched = True
-            #             # break
-            # # change this later: the file business we wanna do
-            # if matched:
-            #     shutil.move(f"{workdir}/{tma_id}", f"Results/Worked/{tma_id}")
-            #     shutil.move(f"{workdir}/{tma_id}_RDN_average_byte.tif",
-            #                 f"Results/Worked/{tma_id}/{tma_id}_RDN_average_byte.tif")
-            #     print("Worked")
-            # else:
-            #     shutil.move(f"{workdir}/{tma_id}_RDN_average_byte.tif", f"Results/Failed/{tma_id}_RDN_average_byte.tif")
-            #     print("Not Worked")
