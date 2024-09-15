@@ -1,9 +1,58 @@
-Computer Vision for Airborne Imaging of Antarctica: Creating a 75-year Record of Surface Change 
-Sani Deshmukh, California Institute of Technology
-Research Mentor: 
-Polar Geospatial Center Director James Dickson (UMN)
-Associate Mentor: 
-Professor Bethany Ehlmann (Caltech)
+Computer Vision for Airborne Imaging of Antarctica: Creating a 75-Year Record of Surface Change
+Author: Sani Deshmukh, California Institute of Technology
+Research Mentor: James Dickson (Polar Geospatial Center Director, UMN)
+Associate Mentor: Professor Bethany Ehlmann (Caltech)
 
 Abstract
-Airborne imaging of Antarctica exists dating back to 1947, but the data are not registered to the surface, preventing efficient comparisons between the surface 75 years ago and today. This project examines the efficacy of various contemporary Computer Vision (CV) algorithms—namely SIFT, AKAZE, KAZE, SURF, and ORB—in registering high-resolution (<10 m/pixel) time-series airborne imagery to cartographically accurate elevation models. To address this, we employed an iterative feature-matching approach that aligns simulated terrains generated from a high-resolution Antarctic elevation model (REMA) with aerial images, enhancing the precision of feature matching by cumulatively retaining accurate matches and discarding outliers. Matching aerial images with an elevation model involved fine-tuning CV algorithm parameters, refining outlier detection techniques, and optimizing iteration and matching processes for matching on inconsistent shadows while disregarding the snow and debris outcrops. Our findings indicate that the SIFT and AKAZE algorithms demonstrate superior performance in matching aerial images, particularly when these images are similarly oriented relative to a larger base map elevation model. These results represent a successful proof-of-concept that will allow accurate georeferencing of historic overflight imagery and extend the temporal analysis of Antarctic surface changes from a few decades to nearly a century.
+Airborne imaging of Antarctica exists dating back to 1947, but the data are not registered to the surface, preventing efficient comparisons between the surface 75 years ago and today. This project evaluates the efficacy of contemporary Computer Vision (CV) algorithms—SIFT, AKAZE, KAZE, SURF, and ORB—in registering high-resolution (<10 m/pixel) time-series airborne imagery to cartographically accurate elevation models.
+
+Approach
+We employed an iterative feature-matching approach that aligns simulated terrains generated from a high-resolution Antarctic elevation model (REMA) with aerial images. Key steps include:
+
+Feature Matching: Fine-tuning CV algorithms to match features between aerial imagery and elevation models.
+Outlier Detection: Using advanced techniques to discard inaccurate matches.
+Optimization: Iteratively refining parameters to improve precision, particularly in handling shadows and disregarding snow and debris.
+Results
+The SIFT and AKAZE algorithms demonstrated superior performance in matching aerial images, especially when similarly oriented relative to the base elevation model. This work is a successful proof-of-concept for georeferencing historic overflight imagery, extending the temporal analysis of Antarctic surface changes from a few decades to nearly a century.
+
+Table of Contents
+Installation
+Usage
+Algorithms
+Results
+Future Work
+Contributors
+Installation
+To run this project, install the following dependencies:
+
+bash
+Copy code
+pip install opencv-python numpy remapy
+Usage
+Clone the repository:
+bash
+Copy code
+git clone https://github.com/yourusername/antarctica-cv.git
+Run the main script:
+bash
+Copy code
+python main.py --input ./data/airborne_images --model ./data/REMA_model
+Algorithms
+The project uses the following algorithms for feature matching:
+
+SIFT (Scale-Invariant Feature Transform)
+AKAZE
+KAZE
+SURF (Speeded-Up Robust Features)
+ORB (Oriented FAST and Rotated BRIEF)
+Results
+The project shows that SIFT and AKAZE outperform other algorithms in matching aerial images, especially when aligned with elevation models.
+
+Future Work
+Enhance outlier detection using machine learning techniques.
+Automate the feature alignment process across various orientations and conditions.
+Scale up to process the full Antarctic archive of aerial imagery.
+Contributors
+Sani Deshmukh - GitHub
+James Dickson - Research Mentor
+Bethany Ehlmann - Associate Mentor
