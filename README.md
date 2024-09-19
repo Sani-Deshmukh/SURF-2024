@@ -1,5 +1,5 @@
 # Computer Vision for Airborne Imaging of Antarctica: Creating a 75-Year Record of Surface Change
-![Succesful matching results](results.png)
+![Succesful matching results](result.png)
 **You can view the full research paper** [here]([SURF 2024 FINAL REPORT.pdf](https://docs.google.com/document/d/1Rt2t64TUNOChu_n2d8sS8sAvSKOVvHRjNxbfG_iSQrM/edit?usp=sharing)).
 
 **Author:** Sani Deshmukh, California Institute of Technology  
